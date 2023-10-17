@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+i {
+  color: #fff;
+}
+.container-fluid {
+  padding: 0;
+  header {
+    height: 40px;
+    width: inherit;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+
+    ul:first-child {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      li {
+        padding: 20px;
+      }
+    }
+    ul:last-child {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+      li {
+        margin: 0;
+      }
+    }
+  }
+  .wrapper-blog {
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    height: 222px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-size: bold;
+    line-height: 40px;
+    color: black;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+    }
+    p {
+      font-size: bold;
+      span {
+        text-align: center;
+        color: #fff;
+        background-color: black;
+      }
+    }
+  }
+  .slider {
+    background: url("../images/jane.jpg") no-repeat center / cover;
+    width: 100%;
+    padding-top: 70%;
+    position: relative;
+
+    &-content {
+      position: absolute;
+      color: #fff;
+      top: 50%;
+      left: 2rem;
+      transform: translateY(-50%);
+    }
+
+    &-title {
+      font-size: 3.6rem;
+      margin-bottom: 3rem;
+    }
+
+    &-desc {
+      font-size: 4.8rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    &-button {
+      display: block;
+      padding: 10px 20px;
+      font-size: 30px;
+      color: #000;
+      background-color: #a0a0a0;
+    }
+    @media (max-width: 767px) {
+      .slider {
+        padding-top: 40%;
+      }
+
+      .slider-content {
+        left: 1rem;
+
+        h3 {
+          display: none;
+        }
+      }
+
+      .slider-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .slider-desc {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+
+      .slider-button {
+        font-size: 10px;
+        padding: 0;
+      }
+    }
+  }
+}
+.row {
+  .col-lg-8 {
+    .story-list {
+      line-height: 40px;
+      .story-item {
+        margin-block: 10px;
+        box-shadow: rgba(10, 10, 10, 0.2) 0px 2px 8px 0px;
+        margin-bottom: 20px;
+        line-height: 30px;
+        .story-title,
+        .story-desc {
+          text-align: center;
+
+          span {
+            color: gray;
+          }
+        }
+        .story-title {
+          font-weight: 500;
+          font-style: bold;
+          padding-top: 30px;
+        }
+      }
+      .story-img > img {
+        margin-block: 20px;
+        margin-left: 20px;
+        align-items: center;
+        width: 95%;
+      }
+      .story-content {
+        // inline trai phai
+        p {
+          font-family: "Open Sans";
+          margin-inline: 20px;
+          font-size: 18px;
+          line-height: 25.5px;
+          padding-bottom: 10px;
+        }
+      }
+      .comment-story {
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        margin-inline: 20px;
+        button {
+          border: none;
+          padding: none;
+          width: 100px;
+          padding: 3px;
+          i {
+            color: black;
+          }
+        }
+
+        button:hover {
+          opacity: 0.7;
+          background-color: gray;
+          transition: 0.2s all ease;
+        }
+        button:nth-child(2) {
+          color: #cccccc;
+
+          background-color: black;
+          span {
+            background-color: #fff;
+            color: black;
+            margin-left: 10px;
+            padding-inline: 10px;
+          }
+        }
+        button:first-child {
+          width: 80px;
+          border: 1px solid black;
+        }
+
+        /* Ẩn button thứ hai trên các thiết bị di động */
+        @media (max-width: 767px) {
+          button {
+            width: 50px;
+            // padding: 2px;
+          }
+
+          button span {
+            margin-left: 5px;
+            // padding-inline: 2px;
+          }
+        }
+      }
+    }
+  }
+  .col-lg-4 {
+    .about {
+      margin-right: 20px;
+      box-shadow: rgba(10, 10, 10, 0.2) 0px 2px 8px 0px;
+      .about-cover {
+        img {
+          width: 100%;
+        }
+      }
+      .about-content {
+        line-height: 20px;
+        color: #fff;
+        font-size: 15px;
+        padding-top: 20px;
+        background-color: black;
+        padding-bottom: 15px;
+
+        p,
+        h5 {
+          font-family: "Open Sans", "Helvetica Neue", sans-serif;
+          line-height: 25px;
+          margin-left: 10px;
+        }
+      }
+    }
+    .title {
+      color: #fff;
+      background-color: black;
+      padding: 15px;
+    }
+    .popular-post {
+      margin-right: 20px;
+      margin-block: 20px;
+      box-shadow: rgba(10, 10, 10, 0.2) 0px 2px 8px 0px;
+      .row {
+        margin-left: 5px;
+        padding: 6px;
+        border: 1px;
+        .col-lg-2 {
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+      @media (max-width: 767px) {
+        .popular-post .col img {
+          max-width: 80px;
+        }
+      }
+    }
+    .Advertise {
+      margin-bottom: 20px;
+      margin-right: 20px;
+      box-shadow: rgba(10, 10, 10, 0.2) 0px 2px 8px 0px;
+      text-align: center;
+      .content-advertise {
+        height: 220px;
+
+        p {
+          background-color: rgb(241, 241, 241);
+          margin-inline: 12px;
+
+          height: 200px;
+          line-height: 200px;
+        }
+      }
+    }
+    .tag {
+      &-list {
+        padding: 1rem;
+        gap: 1rem;
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &-item {
+        padding: 3px 8px;
+        background-color: #f1f1f1;
+        font-size: 1rem;
+
+        &.active {
+          background-color: #000;
+          color: #fff;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    // .Tags {
+    //     box-shadow: rgba(10, 10, 10, 0.2) 0px 2px 8px 0px;
+    //     margin-right: 20px;
+    //     margin-bottom: 20px;
+    //     .content-Tags {
+    //         padding: 20px;
+    //         font-size: 14px;
+    //         ul  {
+    //             display: flex;
+    //             flex-direction: row;
+    //             padding: 5px;
+    //             li {
+    //                 text-align: center;
+    //                width: 80px;
+
+    //                 height: 20px;
+    //                 background-color: rgb(241,241,241);
+    //                 margin-right: 6px;
+    //             }
+    //         }
+
+    //     }
+    // }
+    .Inspiration {
+      box-shadow: rgba(10, 10, 10, 0.2) 0px 2px 8px 0px;
+      margin-right: 20px;
+      margin-bottom: 30px;
+      .content-Inspiration {
+        padding-bottom: 20px;
+      }
+    }
+    .contact {
+      box-shadow: rgba(10, 10, 10, 0.2) 0px 2px 8px 0px;
+      margin-right: 20px;
+      margin-bottom: 30px;
+      ul {
+        display: flex;
+        li {
+          i {
+            margin-left: 20px;
+            font-size: 1.5rem;
+            padding: 10px;
+            color: black;
+          }
+        }
+      }
+    }
+    .Subscribe {
+      padding-bottom: 20px;
+      box-shadow: rgba(10, 10, 10, 0.2) 0px 2px 8px 0px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      .content-sub {
+        margin-inline: 10px;
+        font-family: "Open Sans", "Helvetica Neue", sans-serif;
+        p {
+          font-size: 17px;
+          font-style: initial;
+        }
+        input {
+          padding: 0;
+          width: 100%;
+          padding: 5px;
+        }
+        button {
+          width: 100%;
+          padding: 5px;
+          background-color: #f44336;
+          color: #fff;
+        }
+        button:hover {
+          border: none;
+          background-color: #cccccc;
+          transition-duration: 0.4s;
+          // transition: 0.3s all ease ;
+        }
+      }
+    }
+  }
+}
+footer {
+  height: 200px;
+  width: inherit;
+  background-color: #616161;
+  line-height: 40px;
+  color: #fff;
+  button {
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 40px;
+    margin: 20px 10px;
+    background-color: black;
+  }
+  p {
+    margin: 10px 10px;
+    font-family: "Open Sans";
+    font-size: 15px;
+  }
+}
